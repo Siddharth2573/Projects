@@ -1,0 +1,875 @@
+@font-face {
+    font-family: 'lato-bold';
+    src: url('../fonts/lato-bold.eot');
+    src: url('../fonts/lato-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-bold.woff') format('woff'),
+         url('../fonts/lato-bold.ttf') format('truetype'),
+         url('../fonts/lato-bold.svg#LatoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-regular';
+    src: url('../fonts/lato-regular.eot');
+    src: url('../fonts/lato-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular.woff') format('woff'),
+         url('../fonts/lato-regular.ttf') format('truetype'),
+         url('../fonts/lato-regular.svg#LatRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'p22_corinthia';
+    src: url('../fonts/p22_corinthia.eot');
+    src: url('../fonts/p22_corinthia.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/p22_corinthia.woff') format('woff'),
+         url('../fonts/p22_corinthia.ttf') format('truetype'),
+         url('../fonts/p22_corinthia.svg#P22Corinthia') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background: #fff;
+}
+
+.wrapper{
+    max-width: 1100px;
+    margin:0 auto;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5 ,h6{
+    color: #626262;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6          { font-weight: bolder }
+
+.clearfix:before,  
+.clearfix:after {  
+    content: " ";  
+    display: table;  
+}  
+.clearfix:after {  
+    clear: both;  
+}  
+ 
+.clearfix {  
+    *zoom: 1;  
+}
+
+
+header{
+    width: 100%;
+    height: 120px;
+    background: #9ac0b6 ;
+}
+
+header .logo{
+    margin-top: 40px;
+    float: left;
+}
+
+header a.hamburger{
+    text-decoration: none;
+    display: none;
+    float: right;
+    margin-top: 41px;
+    width: 24px;
+    height: 19px;
+    background: url('../img/hamburger_icon.png') no-repeat;
+}
+
+header a.hamburger.opned{
+    width: 19px;
+    background: url('../img/close_menu_icon.png') no-repeat;
+}
+
+
+header nav{
+    float: right;
+    opacity: 5;
+}
+
+header nav nat{
+   margin-left: 10px;
+    list-style: none;
+    overflow: hidden;
+    float: right;
+    position: absolute;
+    top:0;
+    right:0;
+    
+}
+
+header nav nat a:hover{
+
+color: #800080;
+}
+
+header nav ul{
+    
+    margin-top: 75px;
+    list-style: none;
+    overflow: hidden;
+    float: right;
+}
+
+header nav ul li{
+    float: left;
+    margin-left: 18px;
+}
+
+header nav ul li a,
+header nav .login_btn{
+    text-decoration: none;
+    color: #000000;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    letter-spacing: 1px;
+    
+}
+
+header nav ul li a {
+  text-decoration: none;
+  position: relative;
+  
+}
+
+header nav ul li a:hover {
+  text-decoration: none;
+  color: blue;
+}
+
+header nav ul li a:after {
+  border-radius: 1em;
+  border-bottom: .1em solid #2F56B0;
+  content: "";
+  position: absolute;
+    right: 100%;
+    bottom: .1em;
+    left: 0;
+  transition: right .4s cubic-bezier(0,.5,0,1);
+}
+
+a:hover:after {
+  right: 0;
+}
+
+
+header nav .login_btn{
+    float: right;
+    margin: 30px 0 0 50px;
+    padding: 10px 30px 11px 30px;
+    border: 2px solid #ffffff;
+    background: transparent;
+
+    transition: background .1s linear;
+    -webkit-transition: background .1s linear;
+    -moz-transition: background .1s linear;
+    -o-transition: background .1s linear;
+}
+
+header nav .login_btn:hover{
+    background: #ffffff;
+    color: #1c3655;
+}
+
+.hero{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background: url(../img/bg.jpg) no-repeat bottom center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.hero .caption{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    margin-top: -105px;
+    z-index: 10;
+}
+
+.hero .caption h2{
+    color: #fff;
+    font-family: "p22_corinthia", Helvetica, Arial, sans-serif;
+    font-size: 100px;
+    font-weight: lighter;
+    margin: 0;
+    position: relative;
+    display: block;
+}
+
+.hero .caption h3{
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: -15px 0 0 25px;
+    left: 1px;
+}
+
+
+
+/*  listings section  */
+.listings{
+    padding: 100px 0;
+}
+
+.listings ul.properties_list{
+    list-style: none;
+    overflow: hidden;
+}
+
+.listings ul.properties_list li{
+    display: block;
+    width: 30.90909090909091%;
+    height: auto;
+    position: relative;
+    float: left;
+    margin: 0 3.636363636363636% 3.636363636363636% 0;
+}
+
+.listings ul.properties_list li img.property_img{
+    width: 100%;
+    height: auto!important;
+    vertical-align: top;
+}
+
+
+.listings ul.properties_list li .price{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 15px 20px;
+    background: #ffffff;
+    color: #514d4d;
+    font-family: "lato-bold", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+
+.listings ul.properties_list li:nth-child(3n+0){
+    margin-right: 0;
+}
+
+.listings ul li .property_details{
+    width: 87.64705882352941%;
+    padding: 2.941176470588235% 5.882352941176471% 4.117647058823529% 5.882352941176471%;
+    border-bottom: 1px solid #f2f1f1;
+    border-left: 1px solid #f2f1f1;
+    border-right: 1px solid #f2f1f1;
+
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+
+.listings ul li:hover .property_details{
+    border-bottom: 1px solid #95badf;
+    border-left: 1px solid #95badf;
+    border-right: 1px solid #95badf;
+}
+
+.listings ul li .property_details h1{
+    color: #666464;
+    font-family: "lato-bold", Helvetica, Arial, sans-serif;
+    font-size: 16px!important;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 28px;
+}
+
+.listings ul li .property_details h1 a{
+    text-decoration: none;
+    color: #666464;
+}
+
+.listings ul li .property_details h2{
+    color: #9d9d9d;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: normal;
+}
+
+.listings ul li .property_details .property_size{
+    color: #676767;
+}
+
+
+/*  footer  */
+footer{
+padding-top: 100px;
+    background-color: #000000;
+}
+
+footer .footer > ul{
+    overflow: hidden;
+}
+
+footer .footer > ul > li{
+    display: block;
+    float: left;
+    list-style: none;
+    margin-right: 60px;
+}
+
+footer .footer > ul > li:last-child{
+    margin-right: 0;
+}
+
+
+footer .footer > ul > li.links{
+    width: 197px;
+}
+
+footer ul li.links > ul > li {
+    color: #00CED1;
+    display: block;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 27px;
+    
+}
+footer ul li.links > ul > pre > li a:hover,
+footer ul li.links > ul > li a:hover{
+     color: #FF0000
+}
+
+footer ul li.links > ul > li:last-child{
+    margin-bottom: 0;
+}
+
+footer .footer > ul > li.links li a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: .5px;
+    text-align: left;
+}
+
+footer .footer > ul > li.about{
+    width: 327px;
+}
+
+footer ul li.about p{
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: .5px;
+    line-height: 34px;
+    margin-top: -9px;
+}
+
+
+footer ul li.about > ul > li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+footer ul li.about > ul > li:last-child{
+    margin-right: 0;
+}
+
+footer ul li.about > ul > li a{
+    background: url('../img/social_media.png') no-repeat;
+}
+
+
+footer ul li.about > ul > li a.facebook{
+    display: block;
+    width: 10px;
+    height: 18px;
+    background-position: 0 0;
+}
+footer ul li.about > ul > li a.twitter{
+    display: block;
+    width: 19px;
+    height: 18px;
+    background-position: -11px 0px;
+}
+footer ul li.about > ul > li a.google{
+    display: block;
+    width: 10px;
+    height: 18px;
+    background-position: -31px 0px;
+}
+footer ul li.about > ul > li a.skype{
+    display: block;
+    width: 17px;
+    height: 18px;
+    background-position: -43px 0px;
+}
+
+footer .copyrights{
+    display: block;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: .5px;
+    border-top: 1px solid #82abd4;
+}
+
+footer .copyrights a.ph_link{
+    font-family: "lato-bold", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer .copyrights a {
+color: #00CED1;
+}
+
+
+
+
+
+
+
+
+
+
+/*  responsive css */
+
+
+@media (max-width:1500px){
+    .hero{
+        height: 800px;
+    }
+}
+
+
+@media (max-width: 1150px){
+    .wrapper{
+        padding: 0 40px;
+        max-width: 1020px;
+    }
+    .search .advanced_search .arrow{
+        top: -8px;
+        right: 46px;
+    }
+
+    .search .advanced_search #check_in_date,
+    .search .advanced_search #check_out_date,
+    .search .advanced_search #min_price,
+    .search .advanced_search #max_price{
+        width: 46.27272727272727%;
+        padding: 0 1.818181818181818%;
+    }
+
+    .search .advanced_search #check_in_date,
+    .search .advanced_search #check_out_date{
+        background: url('../img/calendar_icon.png') no-repeat;
+        background-position: 95.08840864440079% 50%;
+    }
+
+    .search .advanced_search #keywords{
+        width: 96.36363636363636%;
+        padding: 0 1.818181818181818%;
+    }
+
+    footer .footer > ul > li{
+        margin-right: 5.454545454545455%;
+    }
+
+    footer .footer > ul > li.links{
+        width: 17.90909090909091%;
+    }
+
+    footer .footer > ul > li.about{
+        width: 29.72727272727273%;
+    }
+}
+
+
+@media (max-width:800px){
+    .hero{
+        height: 600px;
+    }
+
+    .hero .caption{
+        width: 92.72727272727273%;
+        padding: 0 3.636363636363636%; 
+    }
+
+    .hero .caption h3{
+        margin: 0;
+        left: 0;
+    }
+
+    header a.hamburger{
+        display: block;
+    }
+
+    header nav{
+        position: absolute;
+        display: none;
+        width: 92.72727272727273%;
+        top: 95px;
+        left: 3.636363636363636%;
+        float: none;
+        z-index: 20;
+        overflow: hidden;
+        background: #fff;
+        border-top: 5px solid #bfd9f2;
+    }
+
+    header nav.active{
+        display: block;
+    }
+
+    header nav .login_btn{
+        float: none;
+        display: inline-block;
+        width: 100%;
+        border: 0;
+        margin: 0;
+        padding: 20px 0;
+        text-align: center;
+        background: #f2f3f3;
+    }
+
+    header nav ul{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        
+    }
+
+    header nav ul li{
+        display: block;
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+
+    header nav ul li a{
+        display: block;
+        padding: 25px 0;
+        border-bottom: 1px solid #f2f3f3;
+
+        transition: background .2s linear;
+        -webkit-transition: background .2s linear;
+        -moz-transition: background .2s linear;
+        -o-transition: background .2s linear;
+    }
+
+    header nav ul li a:active{
+        background: #f2f3f3;
+    }
+
+    header nav ul li a,
+    header nav .login_btn{
+        color: #1c3655;
+    }
+
+    header nav .login_btn:hover{
+        background: #eaebeb;
+    }
+
+    header nav ul li:last-child{
+        border: 0;
+    }
+
+    .listings ul.properties_list li{
+        width: 46.36363636363636%;
+        margin: 0 7.272727272727273% 7.272727272727273% 0;
+    }
+
+    .listings ul.properties_list li:nth-child(3n+0){
+        margin: 0 7.272727272727273% 7.272727272727273% 0;
+    }
+
+    .listings ul.properties_list li:nth-child(2n+0){
+        margin-right: 0;
+    }
+
+    footer .footer > ul > li{
+        width: 29.6969696969697%!important;
+        margin-right: 5.454545454545455%;
+        margin-bottom: 100px;
+    }
+
+    footer .footer > ul > li:nth-child(3){
+        margin-right: 0;
+    }
+
+    footer .footer > ul > li.links li a{
+        text-align: center;
+    }
+
+    footer .footer > ul > li.about{
+        text-align: center;
+        float: none;
+        display: inline;
+        margin-right: 100%;
+        overflow: hidden;
+        border-top: 1px solid #82abd4;
+    }
+}
+
+
+@media (max-width:700px){
+
+    .search .advanced_search #check_in_date,
+    .search .advanced_search #check_out_date,
+    .search .advanced_search #min_price,
+    .search .advanced_search #max_price{
+        width: 96.36363636363636%;
+        padding: 0 1.818181818181818%;
+        border-bottom: 1px solid #aac8e4;
+    }
+
+    .search .advanced_search #check_in_date,
+    .search .advanced_search #check_out_date{
+        background: url('../img/calendar_icon.png') no-repeat;
+        background-position: 95.08840864440079% 50%;
+    }
+
+    .search .advanced_search #keywords{
+        width: 96.36363636363636%;
+        padding: 0 1.818181818181818%;
+    }
+
+    .search .advanced_search .search_fields{
+        border-bottom: 0;
+    }
+
+    .search .advanced_search .field_sep{
+        display: none;
+    }
+}
+
+
+@media (max-width:500px){
+    .hero .caption h2{
+        font-size: 85px;
+    }
+
+    .hero .caption h3{
+        font-size: 16px;
+    }
+
+    .search #search{
+        width: 83%;
+    }
+
+    .listings ul.properties_list li{
+        width: 100%;
+        margin-bottom: 60px!important;
+    }
+
+    .listings ul.properties_list li:last-child{
+        margin-bottom: 0!important;
+    }
+
+
+    .listings ul.properties_list li:nth-child(3n+0),
+    .listings ul.properties_list li:nth-child(2n+0){
+        margin:0;
+    }
+
+    .listings .more_listing_btn{
+        display: block;
+        width: 100%; 
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+
+    footer .footer > ul > li.links,
+    footer .footer > ul > li.about{
+        float: none;
+        width: 100%!important;
+        margin-right: 0;
+        margin-bottom: 60px;
+        padding-bottom: 60px;
+    }
+
+    footer .footer > ul > li:last-child{
+        padding-bottom: 0;
+    }
+
+    footer .footer > ul > li.links{
+        border-bottom: 1px solid #95badf;
+    }
+}
+	#fom{
+		margin-right: auto;
+		margin-left: auto;
+		width: 300px;
+	}
+
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainerr {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.containerr {
+  padding: 16px;
+}
+
+span.pass {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+
+
+/* The Modall (background) */
+.modall {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modall Content/Box */
+.modall-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.pass {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
