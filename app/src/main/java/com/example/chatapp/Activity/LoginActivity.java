@@ -50,8 +50,8 @@ public class LoginActivity extends AppCompatActivity {
                 progressDialog.show();
                 String email = login_email.getText().toString();
                 String password = login_password.getText().toString();
-                if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password))
-                {
+
+                if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                     progressDialog.dismiss();
                     Toast.makeText(LoginActivity.this, "Enter valid Data", Toast.LENGTH_SHORT).show();
                 } else if(!email.matches(emailPattern)) {

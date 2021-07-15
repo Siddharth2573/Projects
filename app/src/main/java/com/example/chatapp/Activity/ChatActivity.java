@@ -72,7 +72,7 @@ public class ChatActivity extends AppCompatActivity {
         messageAdater = findViewById(R.id.messageAdater);
 
         messagesArrayList = new ArrayList<>();
-        adater = new MessagesAdater(ChatActivity.this, messagesArrayList);
+                adater = new MessagesAdater(ChatActivity.this, messagesArrayList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
         messageAdater.setLayoutManager(linearLayoutManager);
