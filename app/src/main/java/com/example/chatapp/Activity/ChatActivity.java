@@ -1,11 +1,12 @@
 package com.example.chatapp.Activity;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//import com.example.chatapp.ModelClass.AES;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -133,6 +135,7 @@ public class ChatActivity extends AppCompatActivity {
         });
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
                 String message = edtMessage.getText().toString();
@@ -142,7 +145,6 @@ public class ChatActivity extends AppCompatActivity {
                 }
                 edtMessage.setText("");
                 Date date = new Date();
-
                 Messages messages = new Messages(message, SenderUID, date.getTime());
 
                 database.getReference().child("chats")
